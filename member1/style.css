@@ -7,6 +7,7 @@ body {
 }
 
 .topbar {
+
     color: #9b9b9b;
     background-color: #191A1C;
 
@@ -58,6 +59,7 @@ body {
 
 .fb:hover {
     color: #67ACF9;
+    transform: scale(1.1);
 }
 
 .ig {
@@ -67,6 +69,7 @@ body {
 
 .ig:hover {
     color: #67ACF9;
+    transform: scale(1.1);
 }
 
 .github {
@@ -76,6 +79,7 @@ body {
 
 .github:hover {
     color: #67ACF9;
+    transform: scale(1.1);
 }
 
 .topbarright {
@@ -100,6 +104,7 @@ body {
 
 .topbarright a:hover{
     color: #67ACF9;
+    font-size: 18px;
 }
 
 .point {
@@ -143,6 +148,13 @@ body {
     height: 50px;
 
     text-decoration: none;
+
+    transition: all 250ms ease-in-out;
+}
+
+.page1btn:hover {
+    background-color: #4c4e51;
+    transform: scale(105%);
 }
 
 .page2 {
@@ -203,9 +215,9 @@ html {
 }
 
 .rwb {
-    color: white;
+    color: #ffb185;
     text-decoration: none;
-    transition: all 150ms ease-in-out;
+    transition: all 250ms ease-in-out;
 }
 
 .rwb:hover {
@@ -241,6 +253,67 @@ html {
     box-shadow: 5px 5px #0A0E19;
 }
 
+.flipcard {
+    background-color: transparent;
+    width: 225px;
+    height: 300px;
+
+    /* border-radius: 50px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #292A2E;
+
+    box-shadow: 5px 5px #0A0E19; */
+
+    perspective: 1000px;
+}
+
+.flipcardinner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flipcard:hover .flipcardinner {
+    transform: rotateY(170deg) scale(150%);
+}
+
+.flipcardfront, .flipcardback {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+
+.flipcardfront {
+    width: 225px;
+    height: 300px;
+}
+  
+
+.flipcardback {
+    color: white;
+
+    width: 225px;
+    height: 300px;
+
+    width: 225px;
+    height: 300px;
+
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #292A2E;
+
+    box-shadow: 5px 5px #0A0E19;
+    
+    transform: rotateY(170deg);
+}
 
 
 .p2flex {
@@ -324,6 +397,19 @@ html {
     border-radius: 40px;
 
     margin-top: 50px;
+
+    transition: all 250ms ease-in-out;
+}
+
+.p3window:hover {
+    background-color: #444648;
+    width: 450px;
+    height: 300px;
+    box-shadow: 7px 7px #161719;
+    border-radius: 40px;
+
+    margin-top: 50px;
+
 }
 
 .allwork {
@@ -346,6 +432,13 @@ html {
     height: 50px;
 
     text-decoration: none;
+
+    transition: all 250ms ease-in-out;
+}
+
+.allwork:hover {
+    background-color: #4c4e51;
+    transform: scale(105%);
 }
 
 .p3pic {
@@ -494,12 +587,24 @@ html {
     color: #B5B7B6;
     font-weight: 700;
     font-size: 20px;
-    
+
+    transition: all 300ms ease-in-out;
+}
+
+.abc:hover {
+    color: #67ACF9;
+    transform: scale(105%);
 }
 
 .thumbnail {
     width: 50px;
     border-radius: 25px;
+
+    transition: all 300ms ease-in-out;
+}
+
+.thumbnail:hover {
+    width: 60px;
 }
 
 .p4subgrid2 {
@@ -507,4 +612,15 @@ html {
     padding-left: 40px;
 }
 
+
+
+
+
+
+@media screen and (max-width: 500px) and (min-width: 0px) {
+   
+
+
+
+}
 
