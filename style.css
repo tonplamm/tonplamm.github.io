@@ -50,8 +50,31 @@ body {
     color: #7FF8FB;
 }
 
+.fb {
+    color: #9B9B9B;
+    transition: all 300ms ease-in-out;
+}
+
+.fb:hover {
+    color: #67ACF9;
+}
+
 .ig {
     color: #9B9B9B;
+    transition: all 300ms ease-in-out;
+}
+
+.ig:hover {
+    color: #67ACF9;
+}
+
+.github {
+    color: #9B9B9B;
+    transition: all 300ms ease-in-out;
+}
+
+.github:hover {
+    color: #67ACF9;
 }
 
 .topbarright {
@@ -216,6 +239,8 @@ html {
 
     box-shadow: 5px 5px #0A0E19;
 }
+
+
 
 .p2flex {
     background-color: none;
@@ -421,4 +446,60 @@ html {
     top: 150px;
 }
 
+.page4 {
+    height: 600px;
+}
 
+.chongtangtidtor {
+    background-image: linear-gradient(#499eff 40%, #97f8fd 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-align: center;
+    font-size: 50px;
+
+    margin: 0;
+}
+
+.contactmehere {
+    margin: 0;
+    text-align: center;
+    color: #B5B7B6;
+    font-size: 30px;
+}
+
+.p4grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+.p4subgrid {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.abc {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #B5B7B6;
+    font-weight: 700;
+    font-size: 20px;
+    
+}
+
+.thumbnail {
+    width: 50px;
+    border-radius: 25px;
+}
+
+.p4subgrid2 {
+    border-left: 2px solid #97f8fd;
+    padding-left: 40px;
+}
