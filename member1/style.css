@@ -376,6 +376,7 @@ html {
 .page35window:hover {
     background-color: #444648;
     transform: scale(102%);
+    box-shadow: 7px 7px #161719; 
 }
 
 .p35title {
