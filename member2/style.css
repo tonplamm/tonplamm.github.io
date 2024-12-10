@@ -17,6 +17,12 @@
 }
 #PORT{
     font-size: 50px;
+    text-decoration: none;
+    color: white;
+    transition: 0.4s;
+}
+#PORT:hover{
+    color: orange;
 }
 #PORT1{
     margin: 2px;
