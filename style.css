@@ -97,6 +97,28 @@ body {
 .mymypic:hover {
     width: 231px;
     height: 308px;
+    box-shadow: 0 0 10px #499eff, 0 0 10px #6DB4FA
+}
+
+.mymypic2 {
+
+    width: 225px;
+    height: 300px;
+
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #292A2E;
+
+    box-shadow: 5px 5px #0A0E19;
+
+    transition: all 200ms ease-in-out;
+}
+
+.mymypic2:hover {
+    width: 231px;
+    height: 308px;
+    box-shadow: 0 0 10px #ff7e28, 0 0 10px #ff7315
 }
 
 .somediv2 {
@@ -120,6 +142,7 @@ body {
 
     margin: 0;
     text-align: center;
+    
 }
 
 .title:hover {
@@ -220,6 +243,7 @@ body {
     width: 208px;
     height: 52px;
 }
+
 
 
 @media screen and (max-width: 500px) and (min-width: 0px) {
