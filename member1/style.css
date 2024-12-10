@@ -165,7 +165,7 @@ body {
 
 html {
     scroll-behavior: smooth;
-    height: 4000px;
+    height: 3500px;
 }
  
 .whoami {
@@ -375,6 +375,7 @@ html {
 
 .page35window:hover {
     background-color: #444648;
+    transform: scale(102%);
 }
 
 .p35title {
