@@ -1,9 +1,19 @@
 body {
-    margin: 0;
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    width: 100%; /* Ensure it spans the full width of the viewport */
+    max-width: 100%; /* Prevent overflow */
+    overflow-x: hidden; /* Hide any horizontal overflow */
+    box-sizing: border-box; /* Include padding and borders in width/height calculations */
     background-color: 191A1C;
 
     font-family: "Noto Sans Thai", sans-serif;
     text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 3500px;
 }
 
 .topbar {
@@ -112,21 +122,42 @@ body {
     margin-bottom: auto;
 }
 
+#ABOUT {
+    padding-top: 50px; /* Adjust this value based on your header's height */
+    margin-top: -100px; /* Adjust to pull the section up */
+}
+
+#SKILL {
+    padding-top: 50px; /* Adjust this value based on your header's height */
+    margin-top: -100px; /* Adjust to pull the section up */
+}
+
+#WORK {
+    padding-top: -150px; /* Adjust this value based on your header's height */
+    margin-top: -250px; /* Adjust to pull the section up */
+}
+
+#CONTACT {
+    padding-top: 100px; /* Adjust this value based on your header's height */
+    margin-top: -100px; /* Adjust to pull the section up */
+}
+
 .page1 {
     height: 500px;
 }
 
 .p1text {
     color: white;
-    font-size: 7vh;
-
+    font-size: clamp(3vh, 5vw, 7vh); /* Responsive text size */
     margin-top: 200px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-
-    width: 700px;
+    max-width: 90%; /* Keep container width flexible for responsiveness */
+    line-height: 1.2; /* Adjust line spacing */
+    white-space: nowrap; /* Prevent text from wrapping */
 }
+
 
 .page1btn {
     color: #B6B6B6;
@@ -158,44 +189,54 @@ body {
 }
 
 .page2 {
-    height: 800px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: auto;
+    padding: 50px 20px;
     background-color: none;
     opacity: 100%;
 }
 
-html {
-    scroll-behavior: smooth;
-    height: 3500px;
-}
- 
 .whoami {
-    background-color: none;
-
-    width: 400px;
-    height: 220px;
-    position: relative;
-
-    margin-left: 25px;
-
+    width: 100%;
+    max-width: 400px;
+    padding: 0; /* Remove any added padding */
+    margin-left: 0; /* Or set a specific value like `20px` */
 }
+
 
 .whoami1 {
-    font-size: 72px;
+    font-size: clamp(36px, 5vw, 72px);
     background-image: linear-gradient(#499eff 20%, #97f8fd 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    position: absolute;
-    top: 0;
+    position: relative;
+    text-align: left;
+    margin-bottom: -30px;
 }
 
 .whoami2 {
+    color: #B8B8BA;
+    font-size: clamp(20px, 3vw, 40px);
+    text-align: left;
+    margin-top: -10px;
+}
+
+
+/* .whoami2 {
     color: #B8B8BA;
     font-size: 40px;
 
     position: absolute;
     left: 3px;
     bottom: 0;
+} */
+
+.p2phase {
+
+    width: 100%;
+
 }
 
 .p2text {
@@ -339,13 +380,19 @@ html {
 
 .page35 {
     width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+
     height: 700px;
     background-color: none;
     position: relative;
+
+
 }
 
 .grid {
-    width: 1000px;
+    width: 100%;
     height: 450px;
 
     background-color: none;
@@ -483,7 +530,7 @@ html {
     border-width: 2px;
 
     width: 1000px;
-    height: 450px;
+    height: 400px;
 
     margin-top: 50px;
     margin-left: auto;
@@ -746,4 +793,265 @@ html {
     padding-left: 40px;
 }
 
+@media screen and (max-width: 768px) {
+    /* CSS rules for mobile devices */
 
+    html {
+        height: 3000px;
+    }
+
+    .topbar {
+        color: #9b9b9b;
+        background-color: #191A1C;
+    
+        width: 100%; /* Ensure it spans the full width */
+        padding-bottom: 0;
+        border-bottom: 2px solid black;
+    
+        margin: 0;
+    
+        position: fixed;
+        top: 0;
+        left: 0;
+    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    
+        z-index: 9999;
+    }
+
+    .topbarleft {
+        transform: scale(120%);
+        margin-left: 4vh;
+    }
+
+    .topbarright {
+        transform: scale(120%);
+        margin-right: 6vh;
+    }
+
+    .page2 {
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        height: 800px;
+        padding: 50px 20px;
+        background-color: none;
+        opacity: 100%;
+    }
+
+    .whoami {
+        margin-left: 20px;
+    }
+
+    .whoami1 {
+        font-size: clamp(36px, 5vw, 72px);
+        background-image: linear-gradient(#499eff 20%, #97f8fd 80%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+        text-align: left;
+        margin-bottom: -10px;
+    }
+
+    .whoami2 {
+        color: #B8B8BA;
+        font-size: clamp(20px, 3vw, 40px);
+        text-align: left;
+        margin-top: -5px;
+    }
+
+    .p2flex {
+        background-color: none;
+        opacity: 100%;
+    
+    
+        margin-left: auto;
+        margin-right: auto;
+    
+        width: 1500px;
+        height: 400px;
+        max-width: 90%;
+    
+        z-index: 3;
+    
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .p2text {
+        color: white;
+        font-weight: 500;
+        font-size: 28px;
+        text-align: justify;
+    
+        width: 100%;
+        height: 250px;
+    
+        background-color: none;
+    
+        margin-top: 50px;
+        margin-bottom: auto;
+    
+        display: inline-block;
+    }
+
+    .mypic {
+        background-color: none;
+        width: 263px;
+        height: 350px;
+    
+        margin-top: auto;
+        margin-bottom: auto;
+    
+        z-index: 2;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .page3 {
+        width: 100%;
+    }
+
+
+    .page35 {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+    
+        height: 700px;
+        background-color: none;
+        position: relative;
+    
+    
+    }
+
+    .grid {
+        width: 100%;
+        height: 450px;
+    
+        background-color: none;
+    
+        margin-left: auto;
+        margin-right: auto;
+    
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+    
+    }
+    
+    .page35window {
+        width: 300px;
+        height: 200px;
+        background-color: #2A2B2D;
+        border-radius: 40px;
+        transition: all 250ms ease-in-out;
+        position: relative;
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;    /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+    }
+
+    /* .page35gridtop {
+        gap: 10px;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+    } */
+
+    .page35gridtop {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Horizontally centers items */
+        align-items: center; /* Vertically centers items */
+    }
+
+    .page35gridtop > div { /* Targets each child element */
+        flex: 0 1 200px; /* Two items per row, accounting for the gap */
+        box-sizing: border-box; /* Ensures padding doesn't affect width */
+    }
+    
+    .page35gridbottom {
+        margin-top: 10px;
+    
+        gap: 10px;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+    }
+
+    .page3 {
+        height: max-content;
+    }
+
+    .p3mainwindow {
+        background-color: none;
+    
+        border-radius: 50px;
+        border-style: dashed;
+        border-color: #7FF8FB;
+        border-width: 2px;
+    
+        width: 90%;
+        height: 800px;
+    
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    
+        position: relative;
+    
+    }
+
+    .p3insidewindow {
+        display: flex
+    ;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 20px;
+    }
+    
+    .p3window {
+        margin-top: 40px;
+    }
+
+
+    
+    .p3pic2 {
+        height: 80px;
+        width: 120px;
+    
+        border: #202027;
+        border-style: solid;
+        border-width: 5px;
+        box-shadow: 5px 5px #131A24;
+    
+        position: absolute;
+    
+        right: 160px;
+        top: 530px;
+    }
+
+    #contact {
+        width: 0;
+    }
+
+    .page4 {
+
+        transform: scale(80%);
+
+    }
+
+  }
