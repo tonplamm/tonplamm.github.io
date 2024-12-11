@@ -114,7 +114,7 @@ html {
 
 .topbarright a:hover{
     color: #67ACF9;
-    font-size: 18px;
+    transform: scale(105%);
 }
 
 .point {
@@ -532,7 +532,7 @@ html {
     width: 1000px;
     height: 400px;
 
-    margin-top: 50px;
+    margin-top: 200px;
     margin-left: auto;
     margin-right: auto;
 
@@ -793,7 +793,7 @@ html {
     padding-left: 40px;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 400px) {
     /* CSS rules for mobile devices */
 
     html {
@@ -823,27 +823,38 @@ html {
     }
 
     .topbarleft {
-        transform: scale(120%);
-        margin-left: 4vh;
+        transform: scale(100%);
+        margin-left: 1vh;
     }
 
     .topbarright {
-        transform: scale(120%);
-        margin-right: 6vh;
+        /* width: 100px; */
+        transform: scale(70%);
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+
+    .topbarright a:hover{
+        color: #67ACF9;
+        transform: scale(1);
+    }
+
+    .page1 {
+        height: 400px;
     }
 
     .page2 {
         /* display: flex;
         justify-content: center;
         align-items: center; */
-        height: 800px;
+        height: 600px;
         padding: 50px 20px;
         background-color: none;
         opacity: 100%;
     }
 
     .whoami {
-        margin-left: 20px;
+        margin-left: 0px;
     }
 
     .whoami1 {
@@ -886,15 +897,15 @@ html {
     .p2text {
         color: white;
         font-weight: 500;
-        font-size: 28px;
+        font-size: 15px;
         text-align: justify;
     
         width: 100%;
-        height: 250px;
+        height: 150px;
     
         background-color: none;
-    
-        margin-top: 50px;
+
+        margin-top: 10px;
         margin-bottom: auto;
     
         display: inline-block;
@@ -902,10 +913,11 @@ html {
 
     .mypic {
         background-color: none;
-        width: 263px;
-        height: 350px;
+        /* width: 225px;
+        height: 300px; */
+        transform: scale(70%);
     
-        margin-top: auto;
+        margin-top: -50px;
         margin-bottom: auto;
     
         z-index: 2;
@@ -970,25 +982,33 @@ html {
     } */
 
     .page35gridtop {
+        gap: 7px;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center; /* Horizontally centers items */
-        align-items: center; /* Vertically centers items */
+        align-items: stretch; /* Vertically centers items */
     }
 
-    .page35gridtop > div { /* Targets each child element */
-        flex: 0 1 200px; /* Two items per row, accounting for the gap */
-        box-sizing: border-box; /* Ensures padding doesn't affect width */
+    .page35gridtop > div {
+        flex: 1 1 200px; /* Ensures items grow/shrink equally and have a minimum size */
+        max-width: 120px; /* Sets a maximum width to prevent over-expansion */
+        box-sizing: border-box; /* Includes padding and borders in the width/height */
+        text-align: center; /* Centers text inside each item */
     }
     
     .page35gridbottom {
-        margin-top: 10px;
+        margin-top: 7px;
+        margin-left: 1vh;
     
-        gap: 10px;
-        display: grid;
-        grid-template-columns: auto auto;
-        justify-content: center;
+        /* gap: 10px; */
+        display: flex;
+        justify-content: space-around;
+        gap: 7px;
+    }
+
+    .p35title {
+        transform: scale(70%);
     }
 
     .page3 {
@@ -1004,9 +1024,9 @@ html {
         border-width: 2px;
     
         width: 90%;
-        height: 800px;
+        height: 600px;
     
-        margin-top: 50px;
+        margin-top: 150px;
         margin-left: auto;
         margin-right: auto;
     
@@ -1015,19 +1035,39 @@ html {
     }
 
     .p3insidewindow {
-        display: flex
-    ;
+        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        margin-top: 20px;
+        /* margin-top: 100px; */
+        height: 600px;
+        transform: scale(70%);
+        margin-top: -60px;
+        margin-left: -30px;
     }
+
+    .p3w1window {
+        transform: scale(90%);
+    }
+
+    /* .isus {
+        display: flex;
+        justify-content: center;
+    } */
+
+    /* .p3picflex {
+        width: 300px;
+    } */
     
     .p3window {
         margin-top: 40px;
+        width: 500px;
+        
     }
 
-
+    .wtf {
+        width: 120px;
+    }
     
     .p3pic2 {
         height: 80px;
@@ -1040,8 +1080,12 @@ html {
     
         position: absolute;
     
-        right: 160px;
-        top: 530px;
+        right: -3px;
+        top: 510px;
+    }
+
+    .allwork {
+        margin-top: -20px;
     }
 
     #contact {
@@ -1050,7 +1094,7 @@ html {
 
     .page4 {
 
-        transform: scale(80%);
+        transform: scale(60%);
 
     }
 
