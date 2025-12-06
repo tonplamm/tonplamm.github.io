@@ -131,8 +131,17 @@ a {
     height: 40px;
 
     display: flex;
-    /* justify-content: center; */
+    justify-content: space-around;
     align-items: center;
+}
+
+.nav_t {
+    transition: all 250ms;
+}
+
+.nav_t:hover {
+    transform: scale(1.5);
+    color: aquamarine;
 }
 
 .palm {
